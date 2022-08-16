@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soap-quadratice-quation"
+           targetNamespace="http://soap-quadratice-quation" elementFormDefault="qualified">
+
+    <xs:element name="getSolutionQuadraticEquationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="a" minOccurs="0"  maxOccurs="1"  type="xs:double"/>
+                <xs:element name="b" type="xs:double"/>
+                <xs:element name="c" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getSolutionQuadraticEquationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="tns:soapResponse"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="soapResponse">
+        <xs:sequence>
+            <xs:element name="formula" type="xs:string"/>
+            <xs:element name="D" type="xs:string"/>
+            <xs:element name="x1" type="xs:string"/>
+            <xs:element name="x2" type="xs:string"/>
+            <xs:element name="error" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
