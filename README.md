@@ -1,5 +1,8 @@
 # SOAP сервис "Решение квадратного уравнения" 
 
+docker образ: alisaaniskina/soapquadraticequation
+
+Запуск: docker run -p 8080:8080 alisaaniskina/soapquadraticequation
 
 Проект состоит из двух частей:
 
